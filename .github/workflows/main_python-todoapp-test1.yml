@@ -63,4 +63,6 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_13D8A113D7E643AB9E45949F3624C7A6 }}
           
       - name: 'Run app'
-        run: 'uvicorn app:app --reload'
+        run: |
+          source venv/bin/activate
+          'uvicorn app:app --reload'
