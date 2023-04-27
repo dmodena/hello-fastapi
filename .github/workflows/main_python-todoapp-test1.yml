@@ -61,3 +61,6 @@ jobs:
           app-name: 'python-todoapp-test1'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_13D8A113D7E643AB9E45949F3624C7A6 }}
+          
+      - name: 'Run app'
+        run: 'uvicorn app:app --reload'
